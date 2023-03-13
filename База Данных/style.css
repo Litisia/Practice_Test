@@ -1,0 +1,116 @@
+h1 {
+    text-align: center;
+    margin: 30px;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1060px;
+}
+
+.menu-list {
+    display: grid;
+    clear: none;
+    grid-auto-flow: row;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: minmax(auto, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    margin: 5% 0 10% 0;
+}
+
+.menu-cart {
+    border: 1px none #211515;
+    background-color: #fff;
+    box-shadow: 8px 8px 40px 0 rgba(12, 12, 12, 0.508);
+    cursor: pointer;
+    display: flex;
+    overflow: visible;
+    height: auto;
+    max-height: 200px;
+    max-width: 550px;
+    min-height: 150px;
+    min-width: 400px;
+    gap: 20px;
+    transition: all 0.3s;
+}
+
+.menu-cart img {
+    max-height: 177px;
+    min-height: 175px;
+    max-width: 150px;
+    min-width: 150px;
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+.cart-text {
+    text-align: start;
+    font-family: Latolatin, sans-serif;
+    color: #231f20;
+    display: flex;
+    flex-direction: column;
+    max-height: 200px;
+    max-width: 350px;
+    min-height: 150px;
+    min-width: 250px;
+    margin-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.cart-text p,
+h2 {
+    overflow: hidden;
+    margin-bottom: 12px;
+    padding-right: 16px;
+    padding-left: 16px;
+    font-size: 14px;
+    line-height: 22px;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 991px) {
+
+    .menu-list {
+        max-width: 991px;
+        padding-right: 20px;
+        padding-left: 20px;
+        justify-content: space-around;
+        justify-items: center;
+        grid-auto-flow: row;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-template-columns: minmax(auto, 30vw) minmax(auto, 30vw) 1fr;
+    }
+
+    .menu-cart {
+        width: 230px;
+        max-height: none;
+        max-width: none;
+        min-width: auto;
+        flex-direction: column;
+        align-self: stretch;
+    }
+
+    .menu-cart img {
+        max-width: 230px;
+    }
+
+    .cart-text {
+        text-align: center;
+        max-height: none;
+        max-width: none;
+        min-height: 230px;
+        min-width: auto;
+        align-self: stretch;
+    }
+
+}
